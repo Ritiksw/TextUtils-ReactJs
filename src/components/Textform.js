@@ -4,7 +4,7 @@ export default function Textform(props) {
   const [text, setText] = useState();
 
   const handleOnChange = (event) => {
-    console.log("onchange called");
+    // console.log("onchange called");
     setText(event.target.value);
   };
 
@@ -64,8 +64,8 @@ export default function Textform(props) {
             You have entered <b> {text.split(" ").length} words,</b> <b> {text.length} characters </b> and you will take <b> {0.008*(text.split(" ").length)} minutes </b> to read the text.
         </p>
 
-        <h4>Preview of the text entered:</h4>
-       {text}
+        <h3>Preview:</h3>
+       {text.length>0?text:"Please enter some text in the above textbox to preview it here:"}
       </div>
     </>
   );
